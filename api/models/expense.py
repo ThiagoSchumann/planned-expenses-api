@@ -50,7 +50,11 @@ def expense_pre_save(sender, instance, **kwargs):
         next_month = now().month + 1
 
     year_occurrence = now().year
-    transaction_value = round(instance.value / months_to_next_occurrence)
+    try:
+        transaction_value = round(instance.value / months_to_next_occurrence)
+    except ZeroDivisionError:
+        pass
+
     bank_account = BankAccount.objects.get(id=1)
 
     for month in range(months_to_next_occurrence):

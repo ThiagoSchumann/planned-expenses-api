@@ -74,12 +74,22 @@ WSGI_APPLICATION = 'planned_expenses_api.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+             'default': {
+                 'ENGINE': 'django.db.backends.postgresql',
+                 'NAME': 'd8h1qchtppt93l',
+                 'USER': 'lyirgkuxyavptp',
+                 'PASSWORD': 'e9dbbaa44e1b1627063841fc8ae1331077a5d1f4c1d94e12c0bb2908f31f2674',
+                 'HOST': 'ec2-3-213-228-206.compute-1.amazonaws.com',
+                 'PORT': 5432,
+                         }
+             }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators

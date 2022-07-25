@@ -1,3 +1,4 @@
 from .serializer_user import UserSerializer
 from .serializer_expense import ExpenseSerializer
 from .serializer_bank_account import BankAccountSerializer
+from .serializer_transaction import TransactionSerializer

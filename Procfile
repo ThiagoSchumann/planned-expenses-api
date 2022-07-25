@@ -1,1 +1,1 @@
-web: gunicorn api-bkm-scheduling.wsgi:application
+web: gunicorn planned_expenses_api.wsgi:application
